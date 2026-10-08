@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 240" font-family="'Cascadia Mono','JetBrains Mono',Consolas,monospace">
+  <!-- Learning governance: the worker's commit attempt bounces off the
+       authority gate; the owner's key opens it. -->
+  <defs><style>
+    .n{fill:#12100c;stroke:#3a352d}
+    .t{fill:#f0ece3;font-size:14px}
+    .s{fill:#8a8378;font-size:10px;letter-spacing:2px}
+    .dim{fill:#5c564c;font-size:11px}
+    .sig{fill:#e8552f}.ok{fill:#7a9b5e}.blu{fill:#6686d9}
+    @keyframes bounce{0%,100%{transform:translateX(0)}50%{transform:translateX(-8px)}}
+    .bounced{animation:bounce 0.8s steps(2,jump-none) infinite}
+  </style></defs>
+  <rect width="980" height="240" fill="#0c0a08"/>
+  <text x="40" y="36" class="s">LEARNING HAS AUTHORITY — DISCOVERY ≠ COMMIT RIGHTS</text>
+  <!-- worker path -->
+  <rect x="40" y="60" width="200" height="52" class="n"/><text x="62" y="82" class="t">agent:nav</text><text x="62" y="100" class="dim">ran procedure · captured outcome</text>
+  <line x1="240" y1="86" x2="420" y2="86" stroke="#e8552f" stroke-width="1.5" marker-end="url(#r)"/>
+  <!-- the gate -->
+  <rect x="420" y="40" width="140" height="200" fill="none" stroke="#3a352d" stroke-dasharray="4 3"/>
+  <text x="436" y="30" class="s">AUTHORITY</text>
+  <rect x="440" y="64" width="100" height="40" fill="#1c120e" stroke="#e8552f"/>
+  <text x="456" y="89" class="t sig bounced">DENIED</text>
+  <text x="436" y="150" class="dim">role: agent</text>
+  <text x="436" y="166" class="dim">may propose</text>
+  <text x="436" y="182" class="sig">may NOT commit</text>
+  <!-- owner path -->
+  <rect x="40" y="150" width="200" height="52" class="n"/><text x="62" y="172" class="t">owner</text><text x="62" y="190" class="dim">reviews proposal + evidence</text>
+  <line x1="240" y1="176" x2="420" y2="176" stroke="#7a9b5e" stroke-width="1.5" marker-end="url(#g)"/>
+  <text x="452" y="238" class="ok" font-size="13">COMMITTED ✓</text>
+  <!-- proposal held at the gate -->
+  <rect x="600" y="60" width="340" height="142" class="n"/>
+  <text x="620" y="88" class="t">proposal p_abca1f71</text>
+  <text x="620" y="112" class="dim">state: pending · evidence attached</text>
+  <text x="620" y="132" class="sig">agent commit → DENIED (logged, not lost)</text>
+  <text x="620" y="152" class="ok">owner commit → learned, reusable</text>
+  <text x="620" y="180" class="dim">later: agent:nav reuses the procedure it was denied</text>
+  <text x="620" y="196" class="dim">the right to teach itself</text>
+  <marker id="r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e8552f"/></marker>
+  <marker id="g" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7a9b5e"/></marker>
+</svg>

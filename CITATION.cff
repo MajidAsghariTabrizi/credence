@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use credence in your research, please cite it."
+title: credence
+type: software
+authors:
+  - family-names: "Asghari Tabrizi"
+    given-names: Majid
+repository-code: "https://github.com/MajidAsghariTabrizi/credence"
+url: "https://github.com/MajidAsghariTabrizi/credence"
+abstract: "A durable cognitive runtime for long-running AI agents. Append-only knowledge with graded support, evidence, supersession, UNKNOWN detection, governed learning, and missions that outlive processes."
+keywords:
+  - ai-agents
+  - agent-memory
+  - agent-runtime
+  - epistemics
+license: MIT

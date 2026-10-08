@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627" font-family="'Cascadia Mono','JetBrains Mono',Consolas,monospace">
+  <!-- Social launch card: readable at thumbnail size, no paragraph. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14100c"/><stop offset="1" stop-color="#0a0908"/>
+    </linearGradient>
+    <style>
+      .name{fill:#f0ece3;font-size:88px;font-weight:600;letter-spacing:-2px}
+      .line{fill:#f0ece3;font-size:40px}
+      .s{fill:#8a8378;font-size:20px;letter-spacing:4px}
+      .sig{fill:#e8552f}.blu{fill:#6686d9}.dim{fill:#5c564c;font-size:18px}
+      @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+      .live{animation:pulse 1.6s steps(2,jump-none) infinite}
+    </style>
+  </defs>
+  <rect width="1200" height="627" fill="url(#bg)"/>
+  <rect x="36" y="36" width="1128" height="555" fill="none" stroke="#3a352d"/>
+  <text x="84" y="120" class="s">OPEN SOURCE · v0.1.0</text>
+  <text x="84" y="230" class="name">credence</text>
+  <text x="84" y="300" class="line">MOST AGENTS REMEMBER TEXT.</text>
+  <text x="84" y="352" class="line sig">THIS ONE REMEMBERS EVIDENCE.</text>
+  <!-- mini lifecycle strip -->
+  <g font-size="22">
+    <text x="84" y="440" class="dim">UNKNOWN → EVIDENCE → VERIFIED</text>
+    <text x="84" y="476" class="dim">CONTRADICTION → SUPERSEDED (history kept)</text>
+    <text x="84" y="512" class="dim">KILL -9 → MISSION RESUMES</text>
+    <text x="84" y="548" class="dim">WORKER LEARNS → DENIED → OWNER COMMITS</text>
+  </g>
+  <text x="1116" y="570" text-anchor="end" class="s">github.com/MajidAsghariTabrizi/credence</text>
+  <text x="1116" y="120" text-anchor="end" class="sig live">● LIVE</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 420" font-family="'Cascadia Mono','JetBrains Mono',Consolas,monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14100c"/>
+      <stop offset="1" stop-color="#0c0a08"/>
+    </linearGradient>
+    <style>
+      .lbl{fill:#8a8378;font-size:11px;letter-spacing:2px}
+      .val{fill:#f0ece3;font-size:13px}
+      .dim{fill:#5c564c;font-size:11px}
+      .sig{fill:#e8552f}
+      .blu{fill:#6686d9}
+      .cell{fill:none;stroke:#2c2822;stroke-width:1}
+      .edge{stroke:#3a352d;stroke-width:1}
+      @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+      .live{animation:pulse 1.6s steps(2,jump-none) infinite}
+    </style>
+  </defs>
+  <rect width="1120" height="420" fill="url(#bg)"/>
+  <!-- frame -->
+  <rect x="24" y="24" width="1072" height="372" fill="none" stroke="#3a352d"/>
+  <line x1="24" y1="66" x2="1096" y2="66" class="edge"/>
+  <text x="44" y="50" class="lbl">CREDENCE</text>
+  <text x="44" y="50" dx="92" class="dim">DURABLE COGNITIVE RUNTIME · v0.1.0</text>
+  <text x="1076" y="50" text-anchor="end" class="sig">● LIVE</text>
+  <!-- left column: INDEX -->
+  <text x="44" y="94" class="lbl">01 INDEX</text>
+  <g class="val">
+    <rect x="36" y="102" width="228" height="26" fill="#26221c"/>
+    <text x="48" y="119" class="dim">01</text><text x="76" y="119">probe telemetry</text>
+    <text x="48" y="147" class="dim">02</text><text x="76" y="147">calibration proc…</text>
+    <text x="48" y="171" class="dim">03</text><text x="76" y="171">mission backlog</text>
+    <text x="48" y="195" class="dim">04</text><text x="76" y="195">link budget</text>
+  </g>
+  <rect x="36" y="102" width="2" height="26" fill="#e8552f"/>
+  <!-- center: WORKSTREAM -->
+  <text x="292" y="94" class="lbl">02 WORKSTREAM</text>
+  <g>
+    <text x="292" y="124" class="dim">01</text><text x="318" y="124" class="val">ask  hydrazine loop primed?</text>
+    <text x="560" y="124" class="sig">UNKNOWN</text>
+    <text x="292" y="150" class="dim">02</text><text x="318" y="150" class="val">calibration GC-CAL-0051</text>
+    <text x="560" y="150" class="dim">0.019°/sol</text><text x="650" y="150" fill="#7a9b5e">✓ 21ms</text>
+    <text x="292" y="176" class="dim">03</text><text x="318" y="176" class="val">contradiction  old drift 0.3°/sol</text>
+    <text x="560" y="176" class="blu">SUPERSEDED</text>
+    <text x="292" y="202" class="dim">04</text><text x="318" y="202" class="val">learn  deep-spin procedure</text>
+    <text x="560" y="202" class="sig">DENIED→OWNER ✓</text>
+    <rect x="284" y="108" width="640" height="104" class="cell"/>
+    <line x1="284" y1="136" x2="924" y2="136" class="edge"/>
+    <line x1="284" y1="162" x2="924" y2="162" class="edge"/>
+    <line x1="284" y1="188" x2="924" y2="188" class="edge"/>
+  </g>
+  <!-- evidence graph: node changes because evidence arrives -->
+  <text x="292" y="248" class="lbl">03 EVIDENCE GRAPH</text>
+  <g>
+    <rect x="292" y="262" width="150" height="44" class="cell"/>
+    <text x="304" y="281" class="val">drift 0.3°/sol</text>
+    <text x="304" y="297" class="dim">superseded ↘</text>
+    <rect x="500" y="262" width="150" height="44" class="cell"/>
+    <text x="512" y="281" class="val">drift 0.02°/sol</text>
+    <text x="512" y="297" class="dim">active · measured</text>
+    <line x1="442" y1="284" x2="500" y2="284" stroke="#e8552f" stroke-dasharray="4 3"/>
+    <rect x="708" y="262" width="216" height="44" class="cell"/>
+    <text x="720" y="281" class="val">hydrazine primed?</text>
+    <text x="720" y="297" class="sig">UNKNOWN — 0 evidence</text>
+    <!-- evidence arriving animation -->
+    <circle cx="480" cy="284" r="3" fill="#e8552f">
+      <animate attributeName="cx" values="446;500" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- right column: INSPECTOR -->
+  <text x="948" y="94" class="lbl">04 INSPECTOR</text>
+  <g class="val">
+    <text x="948" y="124" class="lbl">STATE</text><text x="948" y="140">OK</text>
+    <text x="948" y="168" class="lbl">TRACE</text><text x="948" y="184">#99356</text>
+    <text x="948" y="212" class="lbl">TIMING</text><text x="948" y="228">36ms</text>
+    <text x="948" y="256" class="lbl">EVIDENCE</text><text x="948" y="272">2 refs</text>
+  </g>
+  <line x1="936" y1="80" x2="936" y2="384" class="edge"/>
+  <line x1="276" y1="80" x2="276" y2="384" class="edge"/>
+  <!-- bottom chassis strip -->
+  <line x1="24" y1="330" x2="924" y2="330" class="edge"/>
+  <g class="val">
+    <text x="44" y="352" class="sig live">● LIVE</text>
+    <text x="110" y="352">RUN 02:11</text>
+    <text x="220" y="352" class="dim">TURNS</text><text x="220" y="368">6</text>
+    <text x="290" y="352" class="dim">STEPS</text><text x="290" y="368">385</text>
+    <text x="360" y="352" class="dim">CLAIMS</text><text x="360" y="368">212</text>
+    <text x="440" y="352" class="dim">SUPERSEDED</text><text x="440" y="368">9</text>
+    <text x="560" y="352" class="dim">UNKNOWN</text><text x="560" y="368">4</text>
+    <text x="640" y="352" class="dim">DENIED</text><text x="640" y="368">1</text>
+  </g>
+  <text x="1076" y="384" text-anchor="end" class="dim">agents propose · authority commits · history never erases</text>
+</svg>

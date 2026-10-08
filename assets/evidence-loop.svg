@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" font-family="'Cascadia Mono','JetBrains Mono',Consolas,monospace">
+  <!-- The epistemic lifecycle: UNKNOWN → INVESTIGATE → EVIDENCE → OBSERVED → VERIFIED,
+       and ACTIVE → COUNTER-EVIDENCE → DISPUTED → SUPERSEDED. Animated: the graph
+       visibly changes because evidence arrives. -->
+  <defs><style>
+    .n{fill:#12100c;stroke:#3a352d}
+    .t{fill:#f0ece3;font-size:14px}
+    .s{fill:#8a8378;font-size:10px;letter-spacing:2px}
+    .dim{fill:#5c564c;font-size:11px}
+    .sig{fill:#e8552f}.blu{fill:#6686d9}.ok{fill:#7a9b5e}
+    .arr{stroke:#8a8378;stroke-width:1;marker-end:url(#a)}
+    @keyframes glow{0%,100%{stroke:#3a352d}50%{stroke:#e8552f}}
+    .arriving{animation:glow 1.6s steps(2,jump-none) infinite}
+    @keyframes move{to{stroke-dashoffset:-14}}
+    .ev{stroke:#e8552f;stroke-width:1.5;stroke-dasharray:4 10;animation:move 1.1s linear infinite;marker-end:url(#r)}
+  </style>
+  <marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8a8378"/></marker>
+  <marker id="r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e8552f"/></marker></defs>
+  <rect width="980" height="300" fill="#0c0a08"/>
+  <text x="40" y="40" class="s">KNOWLEDGE LIFECYCLE — EVERY STATE CHANGE IS AN EVENT IN AN APPEND-ONLY LOG</text>
+  <!-- top row: the unknown path -->
+  <rect x="40" y="70" width="150" height="52" class="n"/><text x="62" y="92" class="t sig">UNKNOWN</text><text x="62" y="110" class="dim">no evidence</text>
+  <line x1="190" y1="96" x2="240" y2="96" class="arr"/>
+  <rect x="240" y="70" width="170" height="52" class="n"/><text x="262" y="92" class="t">INVESTIGATE</text><text x="262" y="110" class="dim">escalation</text>
+  <line x1="410" y1="96" x2="460" y2="96" class="arr"/>
+  <rect x="460" y="70" width="150" height="52" class="n"/><text x="482" y="92" class="t">EVIDENCE</text><text x="482" y="110" class="dim">probe · test · calc</text>
+  <line x1="610" y1="96" x2="660" y2="96" class="arr"/>
+  <rect x="660" y="70" width="150" height="52" class="n"/><text x="682" y="92" class="t ok">OBSERVED</text><text x="682" y="110" class="dim">support: graded</text>
+  <line x1="810" y1="96" x2="860" y2="96" class="arr"/>
+  <rect x="860" y="70" width="100" height="52" class="n"/><text x="882" y="92" class="t ok">VERIFIED</text><text x="882" y="110" class="dim">measured</text>
+  <!-- bottom row: the correction path -->
+  <rect x="40" y="210" width="150" height="52" class="n"/><text x="62" y="232" class="t ok">ACTIVE</text><text x="62" y="250" class="dim">in service</text>
+  <line x1="190" y1="236" x2="240" y2="236" class="arr"/>
+  <rect x="240" y="210" width="210" height="52" class="n arriving"/><text x="262" y="232" class="t sig">COUNTER-EVIDENCE</text><text x="262" y="250" class="dim">contradiction raised</text>
+  <line x1="450" y1="236" x2="500" y2="236" class="arr"/>
+  <rect x="500" y="210" width="150" height="52" class="n"/><text x="522" y="232" class="t blu">DISPUTED</text><text x="522" y="250" class="dim">both alive</text>
+  <line x1="650" y1="236" x2="700" y2="236" class="arr"/>
+  <rect x="700" y="210" width="170" height="52" class="n"/><text x="722" y="232" class="t blu">SUPERSEDED</text><text x="722" y="250" class="dim">kept, not erased</text>
+  <!-- evidence flows into the disputed node and flips it -->
+  <path d="M 535 122 C 535 160, 575 160, 575 210" class="ev"/>
+  <text x="560" y="170" class="dim">new evidence arrives</text>
+  <text x="40" y="288" class="dim">old truth stays inspectable forever: credence explain &lt;claimId&gt;</text>
+</svg>

@@ -1,0 +1,5 @@
+node_modules/
+.credence/
+.credence-demo/
+*.log
+bench/results.local.json

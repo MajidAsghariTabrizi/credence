@@ -1,0 +1,8 @@
+# NOTICE
+
+credence is an original clean-room implementation. All code in this repository
+was written for this project; it contains no third-party source code. The demo
+domain (deep-space probe MNEMOSYNE-7) and all fixtures, benchmarks, and
+telemetry values are synthetic fiction created for this project. Font names
+referenced by SVGs (Cascadia Mono, JetBrains Mono, Consolas) are local
+fallbacks only; no font files are distributed.

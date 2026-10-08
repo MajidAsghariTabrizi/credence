@@ -1,0 +1,27 @@
+{
+  "name": "credence",
+  "version": "0.1.0",
+  "description": "A durable cognitive runtime for long-running AI agents — memory with epistemics, immutable history, governed learning, and missions that outlive processes.",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "credence": "bin/credence.mjs" },
+  "files": ["src", "bin", "demo", "test", "bench", "docs", "assets", "scripts", "integrations"],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test --experimental-strip-types test/kernel.test.ts",
+    "demo": "node bin/credence.mjs demo all",
+    "demo:unknown": "node bin/credence.mjs demo unknown",
+    "demo:contradiction": "node bin/credence.mjs demo contradiction",
+    "demo:kill": "node bin/credence.mjs demo kill",
+    "demo:governed": "node bin/credence.mjs demo governed",
+    "bench": "node --experimental-strip-types bench/run.ts",
+    "scan": "node scripts/scan.mjs"
+  },
+  "engines": { "node": ">=22.6" },
+  "keywords": ["ai-agents", "agent-memory", "agent-runtime", "long-running-agents", "continual-learning", "stateful-agents", "knowledge-graph", "evidence", "epistemics"],
+  "repository": "https://github.com/MajidAsghariTabrizi/credence",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  }
+}

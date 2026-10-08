@@ -1,0 +1,11 @@
+/** Credence kernel public API. */
+export * from './types.ts'
+export { ClaimStore, roleOf, canSee } from './store.ts'
+export { ask, scoreClaim } from './ask.ts'
+export { propose, commitProposal, investigate } from './learn.ts'
+export type { LearnResult, Finding } from './learn.ts'
+export { Keel } from './keel.ts'
+export { pulse } from './pulse.ts'
+export type { PulseReport } from './pulse.ts'
+export { PackRegistry } from './packs.ts'
+export type { PackMeta } from './packs.ts'
