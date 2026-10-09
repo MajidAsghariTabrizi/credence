@@ -13,3 +13,12 @@ First public release.
 - Deterministic demo domain (probe MNEMOSYNE-7) with four signature moments.
 - Seeded benchmark: unknown-detection 1.00, hallucination 0, recall 0.65.
 - Experimental DeepSeek Harness integration adapter.
+
+## 0.2.0 — 2026-10-09
+
+- Real DeepSeek Harness tool plugin: credence_ask / credence_learn / credence_pulse
+  (defineTool on ctx.tools; agent caller is DENIED commit by design).
+- Acquisition README pass: KILL->RESUME replay asset in the first viewport,
+  quickstart leads with demo:kill.
+- Shareable concept cards: unknown / contradiction / governed learning.
+- Good-first issues #2 and #4 specced with acceptance criteria.

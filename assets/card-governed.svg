@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Cascadia Mono','JetBrains Mono',Consolas,monospace">
+  <defs><style>
+    .s{fill:#8a8378;font-size:11px;letter-spacing:2px}
+    .t{fill:#d8d3c8;font-size:16px}.dim{fill:#6b655a;font-size:14px}
+    .ok{fill:#8fb573;font-size:16px}.sig{fill:#e8552f;font-size:16px;font-weight:600}
+    .big{fill:#f0ece3;font-size:40px;font-weight:600}
+    .n{fill:#12100c;stroke:#3a352d}
+    @keyframes bounce{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
+    .bounced{animation:bounce 0.8s steps(2,jump-none) infinite}
+  </style></defs>
+  <rect width="960" height="540" fill="#0c0a08"/>
+  <text x="48" y="56" class="s">CREDENCE · 03</text>
+  <text x="48" y="122" class="big">THE AGENT LEARNED SOMETHING.</text>
+  <text x="48" y="168" class="t">IT STILL COULDN'T TEACH ITSELF.</text>
+  <g>
+    <rect x="48" y="210" width="380" height="240" class="n"/>
+    <text x="72" y="242" class="t">worker  agent:nav</text>
+    <text x="72" y="270" class="dim">ran deep-spin calibration — it worked</text>
+    <text x="72" y="306" class="t">proposal → commit attempt</text>
+    <text x="72" y="338" class="sig bounced">DENIED: agent cannot commit</text>
+    <text x="72" y="366" class="dim">denial logged — proposal p_abca1f71 pending</text>
+  </g>
+  <g>
+    <rect x="470" y="210" width="442" height="240" class="n"/>
+    <text x="494" y="242" class="t">owner</text>
+    <text x="494" y="270" class="dim">reviews evidence: GC-CAL-0051-style run record</text>
+    <text x="494" y="306" class="ok">COMMITTED ✓</text>
+    <text x="494" y="338" class="dim">sol 640 — same worker asks how to recalibrate:</text>
+    <text x="494" y="366" class="t">answer: the procedure it was denied the right to teach itself</text>
+  </g>
+  <text x="912" y="506" text-anchor="end" class="dim">learning ≠ permission to rewrite your own brain</text>
+</svg>

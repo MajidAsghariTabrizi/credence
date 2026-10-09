@@ -1,7 +1,7 @@
 {
   "name": "credence",
-  "version": "0.1.0",
-  "description": "A durable cognitive runtime for long-running AI agents — memory with epistemics, immutable history, governed learning, and missions that outlive processes.",
+  "version": "0.2.0",
+  "description": "A durable cognitive runtime for long-running AI agents â€” memory with epistemics, immutable history, governed learning, and missions that outlive processes.",
   "type": "module",
   "license": "MIT",
   "bin": { "credence": "bin/credence.mjs" },

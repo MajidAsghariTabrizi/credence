@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Cascadia Mono','JetBrains Mono',Consolas,monospace">
+  <defs><style>
+    .s{fill:#8a8378;font-size:11px;letter-spacing:2px}
+    .t{fill:#d8d3c8;font-size:16px}.dim{fill:#6b655a;font-size:14px}
+    .ok{fill:#8fb573;font-size:16px}.blu{fill:#6686d9;font-size:16px}.sig{fill:#e8552f;font-size:16px}
+    .big{fill:#f0ece3;font-size:42px;font-weight:600}
+    .n{fill:#12100c;stroke:#3a352d}
+    .arr{stroke:#8a8378;stroke-width:1;marker-end:url(#a)}
+    @keyframes glow{0%,100%{stroke:#3a352d}50%{stroke:#e8552f}}
+    .hot{animation:glow 1.6s steps(2,jump-none) infinite}
+  </style>
+  <marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8a8378"/></marker></defs>
+  <rect width="960" height="540" fill="#0c0a08"/>
+  <text x="48" y="56" class="s">CREDENCE · 02</text>
+  <text x="48" y="120" class="big">I CHANGED MY MIND.</text>
+  <text x="48" y="164" class="t">HERE IS THE HISTORY.</text>
+  <g>
+    <rect x="48" y="200" width="240" height="60" class="n"/><text x="72" y="226" class="ok">ACTIVE</text><text x="72" y="246" class="dim">drift 0.3°/sol</text>
+    <line x1="288" y1="230" x2="330" y2="230" class="arr"/>
+    <rect x="330" y="200" width="290" height="60" class="n hot"/><text x="354" y="226" class="sig">COUNTER-EVIDENCE</text><text x="354" y="246" class="dim">GC-CAL-0051: 0.019°/sol</text>
+    <line x1="620" y1="230" x2="662" y2="230" class="arr"/>
+    <rect x="662" y="200" width="250" height="60" class="n"/><text x="686" y="226" class="blu">SUPERSEDED</text><text x="686" y="246" class="dim">kept, not erased</text>
+  </g>
+  <g>
+    <rect x="48" y="300" width="864" height="150" class="n"/>
+    <text x="72" y="332" class="dim">2031-03-02  claim-added     "drifts 0.3 degrees per sol"        support=measured</text>
+    <text x="72" y="360" class="dim">2031-03-04  contradiction   GC-CAL-0051 ↔ GC-CAL-0042 (15×)</text>
+    <text x="72" y="388" class="blu">2031-03-04  SUPERSEDED      c_68e8900e → c_e21f0106</text>
+    <text x="72" y="416" class="ok">2031-03-04  claim-added     "drifts 0.02°/sol after recal"      state=active</text>
+  </g>
+  <text x="912" y="506" text-anchor="end" class="dim">the old truth stays inspectable forever — credence explain &lt;id&gt;</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="'Cascadia Mono','JetBrains Mono',Consolas,monospace">
+  <!-- Signature asset: a timed replay of a REAL `npm run demo:kill` run.
+       Every line below is verbatim captured output (pid 53908 -> 65176).
+       Animation: lines appear in execution order; the kill flashes vermilion;
+       the new pid resumes; the final frame holds. Loops after a pause. -->
+  <defs><style>
+    .t{fill:#d8d3c8;font-size:14px}
+    .dim{fill:#6b655a;font-size:14px}
+    .ok{fill:#8fb573;font-size:14px}
+    .sig{fill:#e8552f;font-size:14px;font-weight:600}
+    .big{fill:#f0ece3;font-size:34px;font-weight:600;letter-spacing:-1px}
+    .bigsig{fill:#e8552f;font-size:34px;font-weight:600;letter-spacing:-1px}
+    .ln{opacity:0}
+    .ln2{opacity:0}
+  </style></defs>
+  <rect width="960" height="640" fill="#0c0a08"/>
+  <rect x="16" y="16" width="928" height="608" fill="none" stroke="#3a352d"/>
+  <circle cx="36" cy="36" r="5" fill="#e8552f"/><circle cx="54" cy="36" r="5" fill="#8a8378"/><circle cx="72" cy="36" r="5" fill="#8a8378"/>
+  <text x="928" y="41" text-anchor="end" class="dim">$ npm run demo:kill</text>
+
+  <g opacity="1">
+    <text class="t" x="40" y="86" opacity="0"><tspan class="dim">[pid </tspan><tspan class="sig">53908</tspan><tspan class="dim">]</tspan> step 1/8 done: spin up high-gain antenna<animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.4s" fill="freeze"/></text>
+    <text class="t" x="40" y="112" opacity="0"><tspan class="dim">[pid </tspan><tspan class="sig">53908</tspan><tspan class="dim">]</tspan> step 2/8 done: queue sol-587 imagery block<animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.9s" fill="freeze"/></text>
+    <text class="t" x="40" y="138" opacity="0"><tspan class="dim">[pid </tspan><tspan class="sig">53908</tspan><tspan class="dim">]</tspan> step 3/8 done: queue atmospheric spectrometry block<animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.4s" fill="freeze"/></text>
+    <text class="t" x="40" y="164" opacity="0"><tspan class="dim">[pid </tspan><tspan class="sig">53908</tspan><tspan class="dim">]</tspan> step 4/8 done: compress science payload v2<animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.9s" fill="freeze"/></text>
+    <text class="t" x="40" y="190" opacity="0"><tspan class="dim">[pid </tspan><tspan class="sig">53908</tspan><tspan class="dim">]</tspan> step 5/8 done: integrity-check payload CRC<animate attributeName="opacity" values="0;1" dur="0.2s" begin="2.4s" fill="freeze"/></text>
+  </g>
+  <g>
+    <text class="sig" x="40" y="228" opacity="0">▲ taskkill /PID 53908 /F   — process is DEAD<animate attributeName="opacity" values="0;1;1;0.4;1" dur="1.2s" begin="2.9s" fill="freeze"/></text>
+    <text class="dim" x="40" y="254" opacity="0">            steps 5/8  done=false  lastPid=53908 — DURABLE<animate attributeName="opacity" values="0;1" dur="0.2s" begin="3.4s" fill="freeze"/></text>
+  </g>
+  <g>
+    <text class="t" x="40" y="292" opacity="0"><tspan class="dim">[pid </tspan><tspan class="ok">65176</tspan><tspan class="dim">]</tspan> mission-resumed  from step 5  ← clean process, zero memory<animate attributeName="opacity" values="0;1" dur="0.2s" begin="3.9s" fill="freeze"/></text>
+    <text class="t" x="40" y="318" opacity="0"><tspan class="dim">[pid </tspan><tspan class="ok">65176</tspan><tspan class="dim">]</tspan> step 6/8 done: downlink burst 1<animate attributeName="opacity" values="0;1" dur="0.2s" begin="4.4s" fill="freeze"/></text>
+    <text class="t" x="40" y="344" opacity="0"><tspan class="dim">[pid </tspan><tspan class="ok">65176</tspan><tspan class="dim">]</tspan> step 7/8 done: downlink burst 2<animate attributeName="opacity" values="0;1" dur="0.2s" begin="4.9s" fill="freeze"/></text>
+    <text class="t" x="40" y="370" opacity="0"><tspan class="dim">[pid </tspan><tspan class="ok">65176</tspan><tspan class="dim">]</tspan> step 8/8 done: verify ground receipt + close mission<animate attributeName="opacity" values="0;1" dur="0.2s" begin="5.4s" fill="freeze"/></text>
+    <text class="ok" x="40" y="396" opacity="0">[pid 65176] MISSION COMPLETE: m_science_backlog<animate attributeName="opacity" values="0;1" dur="0.2s" begin="5.9s" fill="freeze"/></text>
+    <text class="dim" x="40" y="422" opacity="0">MISSION: COMPLETE  steps=8/8  interruptions=1<animate attributeName="opacity" values="0;1" dur="0.2s" begin="6.2s" fill="freeze"/></text>
+  </g>
+  <g>
+    <text class="bigsig" x="40" y="510" opacity="0">KILL THE AGENT.<animate attributeName="opacity" values="0;1" dur="0.4s" begin="6.8s" fill="freeze"/></text>
+    <text class="big" x="40" y="552" opacity="0">THE MISSION CONTINUES.<animate attributeName="opacity" values="0;1" dur="0.4s" begin="7.2s" fill="freeze"/></text>
+    <text class="dim" x="40" y="592" opacity="0">credence — npm run demo:kill<animate attributeName="opacity" values="0;1" dur="0.4s" begin="7.6s" fill="freeze"/></text>
+  </g>
+</svg>

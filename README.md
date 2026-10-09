@@ -9,12 +9,16 @@
 [![Node >= 22.6](https://img.shields.io/badge/node-%3E%3D22.6-black.svg)](package.json)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-black.svg)](package.json)
 
-`credence` is a **durable cognitive runtime for long-running AI agents**. Not a vector store, not a RAG pipeline, not an orchestrator — the layer underneath all of them: an append-only knowledge ledger where every belief carries its evidence, every correction preserves its history, every learning passes an authority gate, and every mission survives its process.
+`credence` is an **evidence-first agent memory and durable mission runtime**. Not a vector store, not a RAG pipeline, not an orchestrator — the layer underneath all of them: an append-only knowledge ledger where every belief carries its evidence, every correction preserves its history, every learning passes an authority gate, and every mission survives its process.
 
 - **You need it if** your agent runs for hours or days, and "remembering" currently means stuffing text into a context window.
 - **It's different because** knowledge here has *epistemics*: graded support, evidence links, supersession chains, and an explicit UNKNOWN state. An agent powered by credence can answer *"I don't know — and here's the closest thing I do know, and why it doesn't qualify."*
 
----
+## KILL THE AGENT. THE MISSION CONTINUES.
+
+<p align="center"><img src="assets/kill-resume-demo.svg" alt="Real npm run demo:kill replay — an 8-step mission runs in pid 53908, is hard-killed at step 5, and a clean process (pid 65176) resumes from durable state and completes all 8 steps" width="760"></p>
+
+*(A timed replay of a real `npm run demo:kill` run — those are actual captured output lines and PIDs, not a mockup. Run it yourself below.)*
 
 ## Run it in 30 seconds
 
@@ -23,17 +27,18 @@ Requires Node ≥ 22.6. No install step, no API key, no model — the whole demo
 ```bash
 git clone https://github.com/MajidAsghariTabrizi/credence
 cd credence
-npm run demo
+npm run demo:kill
 ```
 
-That runs all four signature moments. Or run them one at a time:
+That kill-and-resume is one of four signature moments. Or run them one at a time:
 
 | Moment | Command | What you see |
 |---|---|---|
 | **I DON'T KNOW** | `npm run demo:unknown` | A question with hearsay but no evidence → `UNKNOWN`, with the reason. No guessing. |
 | **I CHANGED MY MIND** | `npm run demo:contradiction` | New calibration contradicts old belief → old claim superseded, **never erased**, full chain inspectable. |
-| **KILL ME** | `npm run demo:kill` | Real 8-step mission in a real child process. Hard-killed (`taskkill /F` / `kill -9`) mid-flight. A **clean process resumes and finishes**, log showing both PIDs. |
 | **I LEARNED — BUT NOT BY MYSELF** | `npm run demo:governed` | Worker agent proposes knowledge → `DENIED`. Owner commits. The worker then *reuses* what it was denied the right to teach itself. |
+
+Or run everything: `npm run demo`.
 
 Every headline claim in this README has a test, a command, or a fixture behind it — see [PROOF, NOT PROMISES](#proof-not-promises).
 

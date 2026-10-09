@@ -1,37 +1,55 @@
-# DeepSeek Harness integration (experimental)
+# credence × DeepSeek Harness
 
-Expose a credence pack to a [DeepSeek Harness](https://github.com/) agent
-session: the agent can consult the ledger (`ask`), inspect provenance
-(`explain`), check staleness (`pulse`), and propose learning (`propose` —
-which will be **correctly denied** if the caller is an agent; route commits
-through an owner-side approval step).
+A real DSH tool plugin: mount a credence pack as agent tools.
 
-Status: **EXPERIMENTAL** — the adapter is a thin programmatic client, not a
-packaged plugin. It speaks credence's zero-dependency kernel API; the host
-side (tool registration) follows DeepSeek Harness's client-plugin shape.
+| Tool | What the agent gets |
+|---|---|
+| `credence_ask` | Graded answer or **UNKNOWN with the reason** — never a guess |
+| `credence_learn` | Propose durable knowledge — **DENIED commit by design**; proposals queue for the owner |
+| `credence_pulse` | Ledger health: active/superseded/disputed, staleness, mission state |
 
-## Use
+The agent runs as caller `agent:dsh` inside credence's authority model, so it
+can consult everything public and propose anything — but it cannot teach
+itself. Approvals happen on the owner side (`credence approve <pack> <id>` or
+the `approve` bridge command).
+
+## Install
+
+Credence is a zero-dependency package; the plugin is one file.
+
+1. Clone credence next to your DSH profile or vendor it into your plugin tree:
+   ```bash
+   git clone https://github.com/MajidAsghariTabrizi/credence
+   ```
+2. Register the plugin with your DSH profile's patch layer (cordis patch row
+   pointing at this file's compiled entry, or vendor it as a workspace
+   package — see the DSH extension cookbook's "A tool plugin"):
+   ```yaml
+   # your cordis.patch.yml
+   - id: credence
+     disabled: false
+   ```
+   with the package resolvable as `credence` (path dependency works).
+3. Point it at a pack:
+   ```bash
+   export CREDENCE_HOME=.credence      # store root (default)
+   export CREDENCE_PACK=ground-control # pack name (default: default)
+   ```
+
+The plugin entry is `integrations/deepseek-harness/plugin.ts` (TypeScript,
+runs on Node ≥ 22.6 type-stripping the same as the kernel).
+
+## Try the governed-learning demo against the bridge
 
 ```bash
-cd integrations/deepseek-harness
-node harness-bridge.ts ask ground-control "how much does the star tracker drift?"
-node harness-bridge.ts propose ground-control agent:nav --text "..." --basis "..."
+node integrations/deepseek-harness/harness-bridge.ts ask ground-control "how much does the star tracker drift?"
+node integrations/deepseek-harness/harness-bridge.ts propose ground-control agent:dsh --text "..." --basis "..."
+# → DENIED: agent cannot commit. Proposal recorded, awaiting owner.
+node integrations/deepseek-harness/harness-bridge.ts approve ground-control <proposalId>
 ```
 
-Or from a harness client plugin (schematic):
-
-```ts
-import { register } from 'node:module' // your plugin runtime instead
-import { ClaimStore } from '../../../src/kernel/store.ts'
-import { ask } from '../../../src/kernel/ask.ts'
-import { propose } from '../../../src/kernel/learn.ts'
-
-const store = new ClaimStore('.credence/packs/ground-control')
-// tool: brain_ask → const answer = ask(store, q, caller)
-// tool: brain_learn → propose(store, delta, caller)  // agents are denied by design
-```
-
-The integration deliberately gives the agent **no** commit path: denials are
-the feature. Approvals belong to the operator loop.
-
-Unaffiliated with DeepSeek; this is a community integration target.
+**Status: EXPERIMENTAL.** The plugin follows the public DSH extension API
+(`defineTool` / `ctx.tools.register`) and the bridge is fully runnable, but it
+has not been mounted inside a released DSH profile in CI — issue
+[#6](https://github.com/MajidAsghariTabrizi/credence/issues/6) tracks the
+first end-to-end mount. Independent project; not affiliated with DeepSeek.

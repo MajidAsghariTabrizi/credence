@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Cascadia Mono','JetBrains Mono',Consolas,monospace">
+  <defs><style>
+    .q{fill:#f0ece3;font-size:20px}.s{fill:#8a8378;font-size:11px;letter-spacing:2px}
+    .t{fill:#d8d3c8;font-size:16px}.dim{fill:#6b655a;font-size:14px}
+    .sig{fill:#e8552f;font-size:20px;font-weight:600}.big{fill:#f0ece3;font-size:44px;font-weight:600}
+    .n{fill:#12100c;stroke:#3a352d}
+    @keyframes ap{from{opacity:0}to{opacity:1}}
+  </style></defs>
+  <rect width="960" height="540" fill="#0c0a08"/>
+  <text x="48" y="56" class="s">CREDENCE · 01</text>
+  <text x="48" y="128" class="q">ask: "is the hydrazine secondary loop primed?"</text>
+  <g>
+    <rect x="48" y="160" width="864" height="188" class="n"/>
+    <text x="72" y="192" class="dim">retrieval ………… 1 candidate</text>
+    <text x="72" y="220" class="dim">"hydrazine secondary loop may be primed"</text>
+    <text x="72" y="248" class="dim">support: reported · evidence: 0 refs · source: operator hearsay</text>
+    <text x="72" y="288" class="sig">STATE: UNKNOWN</text>
+    <text x="72" y="316" class="dim">why: closest claim carries no evidence</text>
+  </g>
+  <text x="48" y="428" class="big">"I DON'T KNOW"</text>
+  <text x="48" y="470" class="q">is a valid answer.</text>
+  <text x="912" y="510" text-anchor="end" class="dim">confidence is earned, not generated</text>
+</svg>
