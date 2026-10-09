@@ -13,11 +13,11 @@
  */
 import type { Context } from '@deepseek-ai/cordis'
 import { defineTool } from '@deepseek-ai/dsh-tools'
-import { ask } from './kernel/ask.ts'
-import { propose } from './kernel/learn.ts'
-import { pulse } from './kernel/pulse.ts'
-import { ClaimStore } from './kernel/store.ts'
-import { Keel } from './kernel/keel.ts'
+import { ask } from '../../src/kernel/ask.ts'
+import { propose } from '../../src/kernel/learn.ts'
+import { pulse } from '../../src/kernel/pulse.ts'
+import { ClaimStore } from '../../src/kernel/store.ts'
+import { Keel } from '../../src/kernel/keel.ts'
 
 export const name = 'credence'
 

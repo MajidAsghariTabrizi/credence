@@ -15,6 +15,6 @@
     "noEmit": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["src/**/*", "demo/**/*", "test/**/*", "bench/**/*"]
+  "include": ["src/**/*", "demo/**/*", "test/**/*", "bench/**/*", "integrations/**/*", "types/**/*"]
 }
 

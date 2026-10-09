@@ -2,10 +2,10 @@
  * harness-bridge: CLI access to a credence pack from an agent-harness host.
  * Zero-dependency; runs on Node >= 22.6 type stripping like the kernel.
  */
-import { ClaimStore } from '../../../src/kernel/store.ts'
-import { ask } from '../../../src/kernel/ask.ts'
-import { propose, commitProposal } from '../../../src/kernel/learn.ts'
-import { pulse } from '../../../src/kernel/pulse.ts'
+import { ClaimStore } from '../../src/kernel/store.ts'
+import { ask } from '../../src/kernel/ask.ts'
+import { propose, commitProposal } from '../../src/kernel/learn.ts'
+import { pulse } from '../../src/kernel/pulse.ts'
 
 const home = process.env.CREDENCE_HOME ?? '.credence'
 const [cmd, pack, ...rest] = process.argv.slice(2)
@@ -17,8 +17,11 @@ const store = new ClaimStore(`${home}/packs/${pack}`)
 
 switch (cmd) {
   case 'ask': {
-    const caller = (rest[0] ?? 'agent:harness') as 'agent:harness'
-    console.log(JSON.stringify(ask(store, rest.slice(1).join(' '), caller), null, 2))
+    const flag = rest.indexOf('--caller')
+    const caller = (flag >= 0 ? rest[flag + 1] : 'agent:harness') as 'agent:harness'
+    const q = (flag >= 0 ? [...rest.slice(0, flag), ...rest.slice(flag + 2)] : rest).join(' ')
+    if (q === '') { console.error('ask needs a question'); process.exit(1) }
+    console.log(JSON.stringify(ask(store, q, caller), null, 2))
     break
   }
   case 'pulse':
