@@ -22,3 +22,14 @@ First public release.
   quickstart leads with demo:kill.
 - Shareable concept cards: unknown / contradiction / governed learning.
 - Good-first issues #2 and #4 specced with acceptance criteria.
+
+## 0.2.1 — 2026-10-09
+
+- FIX: DSH plugin and bridge imported the kernel from wrong relative paths
+  (plugin could not load; bridge could not run). Both verified end to end.
+- FIX: CI workflow file rejected by Actions (all runs failed) — now green on
+  Node 22/24 x Linux/Windows.
+- Integrations are now typechecked in CI (ambient host types in types/).
+- New regression tests load the REAL plugin via host shims and drive the
+  tools: 3 registrations, UNKNOWN path, worker DENIED, pulse (13 tests total).
+- Bridge CLI: --caller flag; question no longer eaten as caller.
