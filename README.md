@@ -139,7 +139,7 @@ Everything that was appended before the kill: claims, evidence, proposals, missi
 | LLM-backed collectors | **NOT IMPLEMENTED** (collectors are deterministic functions — bring your own model) |
 | DeepSeek Harness integration | **EXPERIMENTAL** — [`integrations/deepseek-harness/`](integrations/deepseek-harness/README.md) |
 
-This is v0.1.0: a small, complete, honest kernel — not a platform. The gaps above are the roadmap.
+This is v0.2.1: a small, complete, honest kernel — not a platform. The gaps above are the roadmap.
 
 ## DeepSeek Harness integration
 
